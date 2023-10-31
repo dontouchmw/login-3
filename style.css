@@ -1,0 +1,209 @@
+body{
+    background-image: url(background.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    height: 100vh;
+}
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    border: 1px solid;
+    border-color: transparent;
+    border-radius: 80% 20% 80% 20% / 20% 80% 20% 80% ;
+    box-shadow:  5px 5px 20px #242424,
+             -5px -5px 20px #f0f0f0;
+    overflow: hidden;
+    
+}
+.neon {
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.neon::before {
+    content: "";
+    width: 60vh;
+    height: 60vh;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(0deg , transparent, 
+    transparent , #ffffff , #ffffff  , #ffffff);
+    z-index: 1;
+    animation: animate 30s linear infinite;
+    animation-delay: 0s;
+    transform-origin: bottom right;
+    opacity: 0.05;
+}
+.neon::after {
+    content: "";
+    width: 60vh;
+    height: 60vh;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(0deg , transparent, 
+    transparent , #ffffff , #ffffff  , #ffffff);
+    z-index: 1;
+    animation: animate 30s linear infinite;
+    animation-delay: -15s;
+    transform-origin: bottom right;
+    opacity: 0.05;
+}
+
+@keyframes animate {
+    0% 
+    {
+        transform: rotate(0deg);
+    }
+    100% 
+    {
+        transform: rotate(360deg);
+    }
+}
+    
+
+.form-container{
+    overflow: hidden;
+    background-color: transparent;
+    z-index: 2;
+    border-radius: 80% 20% 80% 20% /20% 80% 20% 80% ;
+    width: 60vh;
+    height: 60vh;
+    margin-right: 20px ;
+}
+.log
+{   
+    margin-top: 11vh;
+    margin-bottom: 6vh;
+    color: #ff9f55;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 5px;
+    word-spacing: 3px;
+    text-shadow: #ff9f55 0 0 10px, #ff9f55 0 0 20px,#ff9f55 0 0 40px ;
+}
+.log:hover {
+    
+    color: #ff9f55;
+    text-shadow: 0 0 10px #ff9f55;
+}
+.inputbox
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.forget {
+    text-align: center;
+    margin-top: 20px;
+}
+input {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 10px;
+    margin-left: 5px;
+    margin-bottom:5px;
+    margin-top: 10px;
+    outline: none;
+    color: #ffffff;
+    width: 50%;
+}
+input:hover {
+    border: 1px solid #ff9f55;
+}
+
+ion-icon {
+    font-size: 20px;
+    color: aliceblue;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+button {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    width: 100px;
+    border-radius: 5px ;
+    background-color: aliceblue;
+    border: none;
+    padding: 7px;
+    color: black;
+    box-shadow: #ffffff 0 0 5px;
+    font-size: 17px;
+}
+button:hover {
+    background-color: #ff9f55;
+    box-shadow: #ff9f55 0 0 10px;
+    color: black;
+    border: none;
+}
+.forget {
+    opacity: 0.6;
+    color: aliceblue;
+    margin-bottom: 5vh;
+}
+ion-icon:hover {
+    color: #ff9f55;
+}
+a {
+    color: red;
+    font-size: 16px;
+    font-weight: bolder;
+}
+a:hover {
+    color: #ff9f55;
+    text-shadow: 0 0 10px 0 0 20px 0 0 40px #ff9f55;
+}
+
+
+.url {
+    position: absolute;
+    top:0%;
+    left: 5%;
+    font-size: 50px;
+    color: yellowgreen;
+    text-shadow: yellowgreen 0 0 40px , yellowgreen 0 0 60px ,yellowgreen 0 0 100px ;
+    animation: flicker 1.5s infinite alternate;
+}
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57% , 93% , 100% {
+      text-shadow:
+        0 0 4px yellowgreen,
+        0 0 11px yellowgreen,
+        0 0 19px yellowgreen,
+        0 0 40px yellowgreen,
+        0 0 80px yellowgreen,
+        0 0 90px yellowgreen,
+        0 0 60px yellowgreen,
+        0 0 50px yellowgreen;
+    }
+    20%, 24%, 55% , 65% , 85%{       
+      text-shadow: none;
+    }
+}
+#site {
+    font-size: 40px;
+    color: yellowgreen;
+    text-decoration: solid;
+}
+#site:hover {
+    color: yellowgreen;
+    text-shadow: yellowgreen 0 0 40px;
+}
